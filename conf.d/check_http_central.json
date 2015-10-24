@@ -1,0 +1,18 @@
+{
+   "checks":{
+     "apache-status-central":{
+        "command":"/etc/sensu/plugins/check-http.rb -u http://lamp01/",
+        "interval":30,
+        "subscribers":["apache"],
+        "handlers":["default","remediator"],
+ 
+        "remediation": {
+         "light_remediation": {
+           "occurrences": [1, 2],
+           "severities": [2]
+          }
+        }
+      }
+  }
+}
+	

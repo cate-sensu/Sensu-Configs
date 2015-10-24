@@ -1,0 +1,10 @@
+{
+   "checks":{
+     "CPU_LOAD":{
+       "command":"/etc/sensu/plugins/check-load.rb",
+       "interval":60,
+       "subscribers":["linux"]
+      }
+   }
+}
+

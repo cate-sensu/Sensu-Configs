@@ -1,0 +1,11 @@
+{
+
+   "checks":{
+	"Logstash_Running":{
+	  "command":"/etc/sensu/plugins/check-procs.rb -p logstash -W 1",
+          "handlers":["mailgun","default"],
+	  "interval":60,
+	  "subscribers":["linux"]
+	  }
+	}
+}

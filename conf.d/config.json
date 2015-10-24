@@ -1,0 +1,30 @@
+{
+  "rabbitmq": {
+    "host": "localhost",
+    "port": 5672,
+    "vhost": "/sensu",
+    "user":"sensu",
+    "password":"sensu"
+  },
+  "redis": {
+    "host": "localhost"
+  },
+  "api": {
+    "host": "localhost",
+    "port": 4567,
+    "user":"sensu",
+    "password":"sensu"
+  },
+  "handlers": {
+    "default": {
+      "type": "set",
+      "handlers": [
+        "stdout"
+      ]
+    },
+    "stdout": {
+      "type": "pipe",
+      "command": "cat"
+    }
+  }
+}

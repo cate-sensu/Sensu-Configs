@@ -1,0 +1,8 @@
+{
+  "mailer-mailgun": {
+    "mail_from": "sensu@mester.io",
+    "mail_to": "mmester@mestercons.com",
+    "mg_apikey": "key-87e9a2448819e74ec57561663ccbbc67",
+    "mg_domain": "mester.io"
+  }
+}

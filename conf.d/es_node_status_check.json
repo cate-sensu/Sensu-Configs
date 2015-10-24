@@ -1,0 +1,35 @@
+{
+	"checks": {
+		"check-es-node-status": {
+			"command":"/usr/local/bin/check-es-node-status.rb",
+			"interval":60,
+			"subscribers":["Elasticsearch"]
+		
+		},
+
+		"check-es-cluster-status": {
+			"command":"/usr/local/bin/check-es-cluster-status.rb",
+			"interval":60,
+			"handler":"mailgun",
+			"subscribers":["Elasticsearch"]
+
+		},
+	
+		"check-es-file-descriptors": {
+			"command":"/usr/local/bin/check-es-file-descriptors.rb",
+			"interval":60,
+			"subscribers":["Elasticsearch"]
+			
+		},
+
+		"check-es-heap": {
+			"command":"/usr/local/bin/check-es-heap.rb -c 3000000000 -w 2500000000",
+			"interval":60,
+			"handler":"mailgun",
+			"subscribers":["Elasticsearch"],
+			"low_flap_threshold":20,
+			"high_flap_threshold":60
+			
+		}
+	}
+}

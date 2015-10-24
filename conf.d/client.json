@@ -1,0 +1,9 @@
+
+{
+   "client": {
+    "name": "sensu",
+    "address": "10.0.5.26",
+    "subscriptions": [
+      "linux","sensu"    ]
+  }
+}

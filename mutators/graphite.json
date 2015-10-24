@@ -1,0 +1,7 @@
+{
+  "mutators": {
+    "graphite": {
+      "command": "/usr/local/bin/ruby /etc/sensu/mutators/graphite.rb"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+   "checks":{
+     "NTP_Status":{
+	"command":"/etc/sensu/plugins/check-ntp.rb",
+	"interval":300,
+	"handler":"mailgun",
+	"subscribers":["linux"]
+	}
+    }
+}

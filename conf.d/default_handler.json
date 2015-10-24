@@ -1,0 +1,24 @@
+{
+  "handlers": {
+    "default": {
+      "type": "pipe",
+      "command": "cat"
+    },
+    "mailgun": {
+      "type": "pipe",
+      "command": "/etc/sensu/handlers/mailer-mailgun.rb"
+      },
+    "remediator": {
+      "command": "/etc/sensu/handlers/remediator.rb",
+      "type": "pipe",
+      "severities": ["critical"]
+      },
+    "write-graphite": {
+     "type":"tcp",
+     "socket": {
+	"host":"metrics.lab.mestercons.com",
+	"port":2003
+        }
+     } 
+   }
+}

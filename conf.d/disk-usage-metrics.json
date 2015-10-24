@@ -1,0 +1,12 @@
+{
+   "checks":{
+     "Disk_Usage":{
+       "type": "metric",
+       "handlers": ["default","write-graphite"],
+       "command":"/etc/sensu/plugins/disk-usage-metrics.rb --scheme sensuStats.:::name::: --flatten",
+       "interval":30,
+       "subscribers":["linux"]
+      }
+   }
+}
+

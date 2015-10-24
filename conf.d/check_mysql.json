@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "mysql-alive": {
+      "command": "/etc/sensu/plugins/mysql-alive.rb -h localhost --ini '/etc/sensu/my./cnf'",
+      "interval": 60,
+      "subscribers": [ "mysql" ]
+    },
+  
+    "mysql-disk": {
+      "command": "/etc/sensu/plugins/mysql-disk.rb -u root -p genesis -h localhost -s 400",
+      "interval": 60,
+      "subscribers": ["mysql"]
+  },
+    "mysql-innodb-lock": {
+      "command": "/etc/sensu/plugins/mysql-innodb-lock.rb -p genesis",
+      "interval": 60,
+      "subscribers": ["mysql"]
+  },
+    "mysql-connections": {
+      "command": "/etc/sensu/plugins/mysql-connections.rb -p genesis",
+      "interval": 60,
+      "subscribers": ["mysql"]
+  }
+/*    "mysql-graphite": {
+      "command": "/etc/sensu/plugins/mysql-graphite.rb",
+      "interval": 60,
+      "subscribers": ["mysql"]
+  }*/
+ }
+}

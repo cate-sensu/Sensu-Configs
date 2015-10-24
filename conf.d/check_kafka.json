@@ -1,0 +1,9 @@
+{
+   "checks":{
+     "Kafka-Lag":{
+	"command":"/etc/sensu/plugins/kafka-lag.sh -w 5 -c 10 -z zk-01:2181,zk-02:2181,zk-03:2181 -t mester-log -g confluent",
+	"interval":300,
+	"subscribers":["Kafka"]
+	}
+    }
+}

@@ -1,0 +1,14 @@
+{ 
+
+ "checks":{
+
+   "light_remediation": {
+       "command": "/usr/sbin/service restart apache2",
+       "subscribers": [],
+       "handlers": ["debug"],
+       "publish": false
+       }
+
+
+    }
+}

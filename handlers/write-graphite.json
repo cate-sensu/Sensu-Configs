@@ -1,0 +1,12 @@
+{
+  "handlers": {
+    "write-graphite": {
+      "type": "tcp",
+      "socket": {
+        "host": "metrics.lab.mestercons.com",
+        "port": 2003
+      }
+      "mutator":"graphite"
+    }
+  }
+}

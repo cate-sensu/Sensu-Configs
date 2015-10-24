@@ -1,0 +1,10 @@
+{
+   "checks":{
+     "Check_Disk":{
+       "command":"/etc/sensu/plugins/check-disk.rb",
+       "interval":60,
+       "subscribers":["linux"]
+      }
+   }
+}
+
